@@ -17,6 +17,12 @@ PHONE_NUMBER = os.getenv("PHONE_NUMBER", "94 221 143") # <--- EXAMPLE
 LOGIN_COMPANY = "fr-339599"
 LOGIN_USER = "admin"
 LOGIN_PASS = "Yassine21231434"
+
+
+# Add to imports section
+
+# Add this line BEFORE any Playwright code
+os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "/tmp/playwright"
 # ================== HELPERS ==================
 def url_is_forbidden(url: str) -> bool:
     bad = ["/user/adminMenu.do", "adminMenu.do", "account-users", "/administration", "/admin/", "/manage/users", "/user/manage"]
